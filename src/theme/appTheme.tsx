@@ -2,7 +2,9 @@ import { StyleSheet } from "react-native";
 
 export const colores = {
   primary: '#5856D6',
-  secondary: '#fba748ff'
+  secondary: '#fba748ff',
+  bgTabButton: 'rgba(60, 124, 243, 0.295)',
+  secondaryContainer: "rgb(205, 231, 236)"
 }
 
 export const styles = StyleSheet.create({
