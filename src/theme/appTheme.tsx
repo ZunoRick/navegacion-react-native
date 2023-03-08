@@ -47,5 +47,11 @@ export const styles = StyleSheet.create({
     },
     menuTexto: {
       fontSize: 20
+    },
+    drawerItem:{
+      flexDirection: 'row'
+    },
+    drawerItemIcon:{
+      marginRight: 10
     }
 });

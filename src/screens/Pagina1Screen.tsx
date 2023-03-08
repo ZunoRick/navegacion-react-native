@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Button, Text, TouchableOpacity, View } from 'react-native'
 import { StackScreenProps } from '@react-navigation/stack'
+import Icon from 'react-native-vector-icons/Ionicons';
 import { styles } from '../theme/appTheme';
 
 interface Props extends StackScreenProps<any, any>{
@@ -8,7 +9,6 @@ interface Props extends StackScreenProps<any, any>{
 }
 
 export const Pagina1Screen = ( { navigation }:Props ) => {
-  
   return (
     <View style={ styles.globalMargin }>
       <Text style={ styles.title }>Pagina1Screen</Text>
@@ -36,6 +36,7 @@ export const Pagina1Screen = ( { navigation }:Props ) => {
             nombre: 'Pedro'
           }) }
         >
+          <Icon style={ styles.drawerItemIcon } name='fast-food' size={25} color="white" />
           <Text style={ styles.botonGrandeTexto }>Pedro</Text>
         </TouchableOpacity>
 
@@ -49,6 +50,7 @@ export const Pagina1Screen = ( { navigation }:Props ) => {
             nombre: 'María'
           }) }
         >
+          <Icon style={ styles.drawerItemIcon } name='flask' size={25} color="white" />
           <Text style={ styles.botonGrandeTexto }>María</Text>
         </TouchableOpacity>
       </View>

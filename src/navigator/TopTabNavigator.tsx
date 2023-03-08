@@ -2,6 +2,7 @@ import React from 'react'
 import { Text } from 'react-native';
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import Icon from 'react-native-vector-icons/Ionicons';
 
 import { colores } from '../theme/appTheme';
 import { ChatScreen } from '../screens/ChatScreen';
@@ -32,29 +33,29 @@ export const TopTapNavigator = () => {
           elevation: 0,
         },
         tabBarLabelStyle: {
-          fontSize: 15,
+          fontSize: 13,
           fontWeight: 'bold'
         },
         tabBarIcon: ({ color, focused }) =>{
           let iconName: string = '';
           switch (route.name) {
             case 'Chat':
-              iconName = 'CH'
+              iconName = 'car-outline'
               break;
 
             case 'Contacts':
-              iconName = 'CO'
+              iconName = 'finger-print'
               break;
 
             case 'Albums':
-              iconName = 'AL'
+              iconName = 'options'
               break;
           
             default:
               break;
           }
           
-          return <Text style={{ color }}>{ iconName }</Text>
+          return <Icon name={ iconName } size={25} color={ color } />
         }
       })}
     >
